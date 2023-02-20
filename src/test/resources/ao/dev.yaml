@@ -1,0 +1,12 @@
+host: https://dev.tmonline.vn/back-office
+ext: /api
+sendAcceptanceCode: /json/auth/sendAcceptanceCode
+collect-apply-stats: /json/application/collect-apply-stats
+token: /oauth/token
+getFormType: /json/form/type 
+updatePersonalData: /json/form/updatePersonalData
+updateRegistrationAddressData: /json/form/updateRegistrationAddressData
+updateEmploymentData: /json/form/updateEmploymentData?step=STEP_3_LONG
+updateConditionData: /json/form/updateConditionData?step=STEP_4_LONG
+updateContactPersonData: /json/form/updateContactPersonData?step=STEP_5_LONG
+create: /json/application/create

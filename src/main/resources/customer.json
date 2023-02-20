@@ -1,0 +1,56 @@
+{
+    "addressData": {
+        "city": "Hồ Chí Minh",
+        "cityId": "1",
+        "district": "Quận 1",
+        "districtId": "102",
+        "ward": "Phường Tân Định",
+        "houseStreet": "Random street name",
+        "flat": "Random flat name"
+    },
+    "bankDetailsData": {
+        "providePhotoLater": false,
+        "portalUploadFilesMandatory": false,
+        "portalAccountNumberMandatory": false,
+        "documentFileDto1": null,
+        "documentFileDto2": null
+    },
+    "contactPersonData": {
+        "relationType": "RELATIVE",
+        "name": "NO SCB DEST NAME",
+        "phone": "0999408271"
+    },
+    "employmentData": {
+        "occupationType": "WORKING_WITH_CONTRACT",
+        "workingIndustry": "IT_TELECOM",
+        "employerName": "H.A.S Tech",
+        "employerPhone": "02800000000",
+        "income": 99999999.00
+    },
+    "personalData": {
+        "primaryId": "942417319999",
+        "fullName": "QA TESTING - 0999408271",
+        "cardIssuingDate": "2009-06-28",
+        "birthDate": "1989-06-28",
+        "sex": "FEMALE",
+        "loanPurpose": null,
+        "email": "qa.hastech+0999408271@gmail.com"
+    },
+    "documentsDto": {
+        "documents": []
+    },
+    "signUpData": {
+        "mobilePhone": "0999408271",
+        "fullName": "QA TESTING - 0999408271"
+    },
+    "conditionDto": {
+        "bankName": "SCB - NH TMCP Sài Gòn",
+        "bankCode": null,
+        "accountNumber": "966521176",
+        "cardNumber": null,
+        "provideBankDetailsLater": false,
+        "disburseType": "BANK_ACCOUNT",
+        "license": null,
+        "portalAccountNumberMandatory": false
+    }
+}

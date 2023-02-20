@@ -1,0 +1,12 @@
+host: https://tm24h.com.vn/back-office
+ext: /api
+sendNewPhone: /landing/new-phone
+sendAcceptanceCode: /json/signUp/sendAcceptanceCode
+verifyAcceptanceCode: /json/signUp/verifyAcceptanceCode
+token: /oauth/token
+portal: /dynamic-form/portal
+updatePersonalData: /v2/json/form/updatePersonalData
+updateRegistrationAddressData: /v2/json/form/updateRegistrationAddressData
+updateEmploymentData: /v2/json/form/updateEmploymentData
+updateBankAndContactData: /v2/json/form/updateBankAndContactData
+create: /v2/json/application/create
