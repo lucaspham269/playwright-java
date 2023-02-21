@@ -3,5 +3,6 @@ This directory contains sample [`pom.xml`](./pom.xml) and source code for the Pl
 You can run them in terminal like this:
 
 ```sh
-mvn compile exec:java -Dexec.mainClass=org.example.PageScreenshot
+mvn -Dtest=LLCucumberTest clean test
+mvn -Dtest=AOCucumberTest clean test
 ```

@@ -14,11 +14,14 @@ import org.yaml.snakeyaml.Yaml;
 
 public class ConfigFileReader {
     private static Properties properties;
-	private final String propertyFilePath= "src/test/resources/configuration.properties";
+	private final String propertyFilePath = "src/test/resources/configuration.properties";
 	private String applicationConfigPath;
 	private String country;
 	private String browser;
 	private String environment;
+	private String testDataResourcePath;
+
+	private BufferedReader reader = null;
 
 	public String getCountry() {
 		return country;
@@ -44,36 +47,28 @@ public class ConfigFileReader {
 		this.environment = environment;
 	}
 
-	public ConfigFileReader(){
-		BufferedReader reader = null;
-		country = System.getenv("country");
-		browser = System.getenv("browser");
-		environment = System.getenv("environment");
+	public ConfigFileReader() {
 		try {
 			reader = new BufferedReader(new FileReader(propertyFilePath));
 			properties = new Properties();
-			try { 
-				properties.load(reader); 
-				if(country == null)
-					country = properties.getProperty("country");
-				if(browser == null)
-					browser = properties.getProperty("browser");
-				if(environment == null)
-					environment = properties.getProperty("environment");
-			}
-			catch (IOException e) { e.printStackTrace(); }
-		} catch (FileNotFoundException e) {
+			properties.load(reader);
+			testDataResourcePath = properties.getProperty("testDataResourcePath");
+			country = System.getProperty("country");
+			browser = System.getProperty("browser");
+			environment = System.getProperty("environment");
+		} catch (IOException e) {
 			throw new RuntimeException("Properties file not found at path : " + propertyFilePath);
-		}finally {
-			try { if(reader != null) reader.close(); }
-			catch (IOException ignore) {}
-		}		
+		} finally {
+			try {
+				if (reader != null)
+					reader.close();
+			} catch (IOException ignore) {
+			}
+		}
 	}
 
 	public String getTestDataResourcePath(){
-		String testDataResourcePath = properties.getProperty("testDataResourcePath");
-		if(testDataResourcePath!= null) return testDataResourcePath;
-		else throw new RuntimeException("Test Data Resource Path not specified in the Configuration.properties file for the Key:testDataResourcePath");		
+		return testDataResourcePath;
 	}
 
     public Map<String, Object> getApplicationConfig() {

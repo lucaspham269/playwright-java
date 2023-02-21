@@ -58,8 +58,6 @@ public class AppSubmissionLL {
 
     void createTestContext() {
         configFileReader = new ConfigFileReader();
-        configFileReader.setCountry("ll");
-        configFileReader.setEnvironment("preprod");
         customer = new CustomerLL();
 
         HOST = configFileReader.getApplicationConfig().get("host").toString();

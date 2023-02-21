@@ -55,10 +55,7 @@ public class AppSubmissionAO {
 
     void createTestContext() {
         configFileReader = new ConfigFileReader();
-        configFileReader.setCountry("ao");
-        configFileReader.setEnvironment("preprod");
         customer = new Customer();
-
         HOST = configFileReader.getApplicationConfig().get("host").toString();
         EXT = configFileReader.getApplicationConfig().get("ext").toString();
         collectApplyStats = configFileReader.getApplicationConfig().get("collect-apply-stats").toString();
